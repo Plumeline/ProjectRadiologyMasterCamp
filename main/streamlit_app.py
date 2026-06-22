@@ -5,6 +5,7 @@ from pathlib import Path
 import streamlit as st
 from PIL import Image
 
+
 from src.inference import toy_predict
 from src.guardrails import apply_safety_guardrails
 
