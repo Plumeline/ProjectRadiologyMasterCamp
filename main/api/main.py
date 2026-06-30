@@ -2,14 +2,17 @@ from __future__ import annotations
 
 import re
 import shutil
+import time
 from pathlib import Path
 from fastapi import FastAPI, File, UploadFile
 
 from src.inference import toy_predict
 from src.guardrails import apply_safety_guardrails
+from src.database import insert_run
 
 app = FastAPI(title="Assistant radiologue virtuel EFREI", version="0.1.0")
 UPLOAD_DIR = Path("tmp_uploads")
+DB_PATH = Path(__file__).resolve().parent.parent / "medical_ai_evidence.sqlite"
 
 
 @app.get("/")
@@ -27,5 +30,12 @@ async def predict(file: UploadFile = File(...)) -> dict:
     target = UPLOAD_DIR / f"uploaded_{safe_stem}{suffix}"
     with target.open("wb") as f:
         shutil.copyfileobj(file.file, f)
-    pred = toy_predict(target, mode="improved")
-    return apply_safety_guardrails(pred)
+    
+    pred = apply_safety_guardrails(toy_predict(target, mode="improved"))
+    
+    # Save the run to the database
+    case_id = f"api_{safe_stem}_{int(time.time())}"
+    insert_run(DB_PATH, case_id, str(target), pred)
+    
+    return pred
+
