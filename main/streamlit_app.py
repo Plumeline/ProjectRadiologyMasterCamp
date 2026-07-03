@@ -52,7 +52,7 @@ if page == "Analyser une radio":
                 
                 # Log the prediction run to SQLite database
                 case_id = f"web_{Path(uploaded.name).stem}_{int(time.time())}"
-                insert_run(DB_PATH, case_id, str(tmp_path), pred)
+                insert_run(DB_PATH, case_id, str(tmp_path), pred, dataset_source="web_upload")
                 
             st.metric("Classe prédite", pred["predicted_class"].upper())
             st.metric("Confiance", f"{pred['confidence'] * 100:.1f} %")
@@ -110,6 +110,6 @@ else:
             
         st.write("---")
         st.subheader("Historique détaillé des 10 dernières analyses")
-        df_display = df.sort_values(by="id", ascending=False).head(10)[["case_id", "predicted_class", "confidence", "latency_ms", "created_at"]]
+        df_display = df.sort_values(by="id", ascending=False).head(10)[["case_id", "predicted_class", "confidence", "latency_ms", "dataset_source", "created_at"]]
         st.dataframe(df_display, use_container_width=True)
 

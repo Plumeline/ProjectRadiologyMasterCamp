@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS runs (
     predicted_class TEXT,
     confidence REAL,
     latency_ms INTEGER,
+    dataset_source TEXT,
     created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
 

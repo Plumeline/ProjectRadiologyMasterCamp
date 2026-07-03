@@ -35,7 +35,7 @@ async def predict(file: UploadFile = File(...)) -> dict:
     
     # Save the run to the database
     case_id = f"api_{safe_stem}_{int(time.time())}"
-    insert_run(DB_PATH, case_id, str(target), pred)
+    insert_run(DB_PATH, case_id, str(target), pred, dataset_source="api_upload")
     
     return pred
 

@@ -47,7 +47,7 @@ def run(mode: str, db_path: Path) -> tuple[list[dict], dict]:
             'guardrail_errors': ';'.join(errors),
         }
         rows.append(row)
-        insert_run(db_path, case['case_id'], str(image_path), pred)
+        insert_run(db_path, case['case_id'], str(image_path), pred, dataset_source=case.get('source', 'synthetic_toy'))
     metrics = summarize_metrics(rows)
     return rows, metrics
 

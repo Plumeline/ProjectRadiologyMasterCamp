@@ -19,13 +19,13 @@ def init_db(db_path: str | Path = "medical_ai_evidence.sqlite") -> None:
     conn.commit(); conn.close()
 
 
-def insert_run(db_path: str | Path, case_id: str, image_path: str, prediction: dict) -> None:
+def insert_run(db_path: str | Path, case_id: str, image_path: str, prediction: dict, dataset_source: str = "upload") -> None:
     init_db(db_path)
     conn = connect(db_path)
     conn.execute(
         """
-        INSERT INTO runs(case_id, image_path, model_name, prompt_version, prediction_json, predicted_class, confidence, latency_ms)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO runs(case_id, image_path, model_name, prompt_version, prediction_json, predicted_class, confidence, latency_ms, dataset_source)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (
             case_id,
@@ -36,6 +36,7 @@ def insert_run(db_path: str | Path, case_id: str, image_path: str, prediction: d
             prediction.get("predicted_class"),
             float(prediction.get("confidence", 0.0)),
             int(prediction.get("latency_ms", 0)),
+            dataset_source,
         ),
     )
     conn.commit(); conn.close()
