@@ -1,0 +1,5 @@
+mode,accuracy,json_valid_rate,warning_rate,uncertain_rate,false_negatives
+baseline,0.8000,1.0000,1.0000,0.3333,6
+improved,0.6667,1.0000,1.0000,0.3333,10
+improved_v2,0.3667,1.0000,1.0000,0.3333,0
+improved_v3,0.8667,1.0000,1.0000,0.2667,1
