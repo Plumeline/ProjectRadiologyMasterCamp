@@ -31,6 +31,7 @@ CASES_CSV = REPO_ROOT / "data" / "synthetic_cases.csv"
 PROMPT_FILES = {
     "baseline": REPO_ROOT / "prompts" / "baseline_prompt.txt",
     "improved": REPO_ROOT / "prompts" / "improved_prompt.txt",
+    "improved_v2": REPO_ROOT / "prompts" / "improved_prompt_v2.txt",
 }
 OUT_DIR = REPO_ROOT / "eval" / "cached_predictions"
 
@@ -139,7 +140,7 @@ def run_one(model, processor, prompt_text, image_path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--prompt", choices=["baseline", "improved"], required=True)
+    ap.add_argument("--prompt", choices=["baseline", "improved", "improved_v2"], required=True)
     ap.add_argument("--limit", type=int, default=None, help="debug: only N cases")
     args = ap.parse_args()
 
