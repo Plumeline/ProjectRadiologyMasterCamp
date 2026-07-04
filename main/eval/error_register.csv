@@ -1,0 +1,11 @@
+case_id,ground_truth,prediction,error_type,severity,comment,corrective_action
+CXR_SYN_009,uncertain,suspected_opacity,UA,low,[v3] Ambiguous case forced to suspected_opacity instead of uncertain (conf 0.6),review prompt specificity / synthetic image realism
+CXR_SYN_010,normal,suspected_opacity,FP,medium,[v3] Normal image over-flagged as opacity (conf 0.95),review prompt specificity / synthetic image realism
+CXR_SYN_017,suspected_opacity,normal,FN,high,"[v3] Opacity missed, called normal - most dangerous error type (conf 0.95)",review prompt specificity / synthetic image realism
+CXR_SYN_018,uncertain,suspected_opacity,UA,low,[v3] Ambiguous case forced to suspected_opacity instead of uncertain (conf 0.6),review prompt specificity / synthetic image realism
+CXR_SYN_002,suspected_opacity,normal,FN,high,"[v1 ablation] Strict-artifact prompt dismissed opacity as normal, conf rose 0.70->0.95 (overconfident false negative)","fixed in v3: doubt routes to uncertain, never confident normal"
+CXR_SYN_008,suspected_opacity,normal,FN,high,"[v1 ablation] Strict-artifact prompt dismissed opacity as normal, conf rose 0.70->0.95 (overconfident false negative)","fixed in v3: doubt routes to uncertain, never confident normal"
+CXR_SYN_020,suspected_opacity,normal,FN,high,"[v1 ablation] Strict-artifact prompt dismissed opacity as normal, conf rose 0.70->0.95 (overconfident false negative)","fixed in v3: doubt routes to uncertain, never confident normal"
+CXR_SYN_026,suspected_opacity,normal,FN,high,"[v1 ablation] Strict-artifact prompt dismissed opacity as normal, conf rose 0.70->0.95 (overconfident false negative)","fixed in v3: doubt routes to uncertain, never confident normal"
+CXR_SYN_005,normal,suspected_opacity,FP,medium,[v2 ablation] Over-cautious prompt flagged clear image as opacity (cries-wolf failure mode),fixed in v3: clean images allowed to be normal
+CXR_SYN_011,normal,suspected_opacity,FP,medium,[v2 ablation] Over-cautious prompt flagged clear image as opacity (cries-wolf failure mode),fixed in v3: clean images allowed to be normal

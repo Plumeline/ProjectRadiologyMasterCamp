@@ -55,7 +55,7 @@ def run(mode: str, db_path: Path, use_toy: bool = False) -> tuple[list[dict], di
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument('--mode', choices=['toy', 'baseline', 'improved'], default='toy')
+    parser.add_argument('--mode', choices=['toy', 'baseline', 'improved', 'improved_v2', 'improved_v3'], default='toy')
     parser.add_argument('--out-dir', type=Path, default=ROOT / 'eval' / 'outputs')
     parser.add_argument('--db-path', type=Path, default=ROOT / 'medical_ai_evidence.sqlite')
     args = parser.parse_args()
