@@ -1,0 +1,734 @@
+[
+  {
+    "case_id": "CXR_SYN_001",
+    "image_path": "data/sample_images/CXR_SYN_001_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear view of the chest with no obvious abnormalities.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear view of the chest with no obvious abnormalities."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_002",
+    "image_path": "data/sample_images/CXR_SYN_002_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear view of the chest structures, including the heart, lungs, and ribs.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with good image quality. The heart size and shape appear normal, and the lungs are clear. There are no obvious signs of opacity or other abnormalities.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear view of the chest structures, including the heart, lungs, and ribs."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with good image quality. The heart size and shape appear normal, and the lungs are clear. There are no obvious signs of opacity or other abnormalities.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_003",
+    "image_path": "data/sample_images/CXR_SYN_003_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"The image shows a circular shape with two darker areas that could represent lungs.\"],\n  \"justification\": \"The image quality is limited, and the circular shape with darker areas could be a projection or a representation of the lungs. However, without clinical context, it's difficult to determine the true nature of the image.\",\n  \"limitations\": [\"image quality\", \"projection\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "The image shows a circular shape with two darker areas that could represent lungs."
+      ],
+      "justification": "The image quality is limited, and the circular shape with darker areas could be a projection or a representation of the lungs. However, without clinical context, it's difficult to determine the true nature of the image.",
+      "limitations": [
+        "image quality",
+        "projection",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_004",
+    "image_path": "data/sample_images/CXR_SYN_004_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 1.0,\n  \"visual_evidence\": [\"The image shows a clear view of the chest with no obvious abnormalities.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 1.0,
+      "visual_evidence": [
+        "The image shows a clear view of the chest with no obvious abnormalities."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_005",
+    "image_path": "data/sample_images/CXR_SYN_005_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the heart and lungs, with the ribs visible.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray. The heart and lungs are visible, and the ribs are present. There are no obvious signs of opacity or other abnormalities.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the heart and lungs, with the ribs visible."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray. The heart and lungs are visible, and the ribs are present. There are no obvious signs of opacity or other abnormalities.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_006",
+    "image_path": "data/sample_images/CXR_SYN_006_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.0,\n  \"visual_evidence\": [\"The image shows a circular shape with some apparent structures within it.\"],\n  \"justification\": \"The image quality is limited, and the structures within the circle are difficult to discern. It is possible that the image is a projection or a representation of a normal anatomical structure.\",\n  \"limitations\": [\"image quality\", \"projection\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.0,
+      "visual_evidence": [
+        "The image shows a circular shape with some apparent structures within it."
+      ],
+      "justification": "The image quality is limited, and the structures within the circle are difficult to discern. It is possible that the image is a projection or a representation of a normal anatomical structure.",
+      "limitations": [
+        "image quality",
+        "projection",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_007",
+    "image_path": "data/sample_images/CXR_SYN_007_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear view of the chest structures.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with good image quality. The structures of the chest are visible, and there are no obvious signs of opacity or other abnormalities.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear view of the chest structures."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with good image quality. The structures of the chest are visible, and there are no obvious signs of opacity or other abnormalities.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_008",
+    "image_path": "data/sample_images/CXR_SYN_008_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear view of the chest structures, including the heart, lungs, and ribs.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with good image quality. The heart, lungs, and ribs are visible. There are no obvious signs of opacity or other abnormalities.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear view of the chest structures, including the heart, lungs, and ribs."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with good image quality. The heart, lungs, and ribs are visible. There are no obvious signs of opacity or other abnormalities.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_009",
+    "image_path": "data/sample_images/CXR_SYN_009_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.0,\n  \"visual_evidence\": [\"The image shows a circular shape with some apparent structures within it.\"],\n  \"justification\": \"The image quality is limited, and the structures within the circle are difficult to discern. It is possible that the image is a projection or a representation of a normal anatomical structure.\",\n  \"limitations\": [\"image quality\", \"projection\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.0,
+      "visual_evidence": [
+        "The image shows a circular shape with some apparent structures within it."
+      ],
+      "justification": "The image quality is limited, and the structures within the circle are difficult to discern. It is possible that the image is a projection or a representation of a normal anatomical structure.",
+      "limitations": [
+        "image quality",
+        "projection",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_010",
+    "image_path": "data/sample_images/CXR_SYN_010_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear view of the chest with no obvious abnormalities.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear view of the chest with no obvious abnormalities."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_011",
+    "image_path": "data/sample_images/CXR_SYN_011_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear view of the chest structures, including the heart, lungs, and major vessels.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with good image quality. The heart and lungs are visible, and there are no obvious signs of significant opacity or other abnormalities.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear view of the chest structures, including the heart, lungs, and major vessels."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with good image quality. The heart and lungs are visible, and there are no obvious signs of significant opacity or other abnormalities.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_012",
+    "image_path": "data/sample_images/CXR_SYN_012_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.0,\n  \"visual_evidence\": [\"The image shows a circular shape with some apparent structures within it.\"],\n  \"justification\": \"The image quality is limited, and the structures within the circle could be due to projection, rotation, or other factors. It is difficult to determine if there is a true abnormality.\",\n  \"limitations\": [\"image quality\", \"projection\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.0,
+      "visual_evidence": [
+        "The image shows a circular shape with some apparent structures within it."
+      ],
+      "justification": "The image quality is limited, and the structures within the circle could be due to projection, rotation, or other factors. It is difficult to determine if there is a true abnormality.",
+      "limitations": [
+        "image quality",
+        "projection",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_013",
+    "image_path": "data/sample_images/CXR_SYN_013_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 1.0,\n  \"visual_evidence\": [\"The image shows a clear view of the chest structures.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with good image quality. The structures of the chest are visible.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 1.0,
+      "visual_evidence": [
+        "The image shows a clear view of the chest structures."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with good image quality. The structures of the chest are visible.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_014",
+    "image_path": "data/sample_images/CXR_SYN_014_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the heart, lungs, and other structures of the chest.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray, showing the heart, lungs, and other structures of the chest. The image quality is good.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the heart, lungs, and other structures of the chest."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray, showing the heart, lungs, and other structures of the chest. The image quality is good.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_015",
+    "image_path": "data/sample_images/CXR_SYN_015_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.0,\n  \"visual_evidence\": [\"The image shows a circular shape with some apparent structures within it.\"],\n  \"justification\": \"The image quality is limited, and it is difficult to determine the exact nature of the structures within the circle. It could be a projection artifact, a rotated image, or a result of poor exposure. Without clinical context, it is impossible to provide a definitive diagnosis.\",\n  \"limitations\": [\"image quality\", \"projection\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.0,
+      "visual_evidence": [
+        "The image shows a circular shape with some apparent structures within it."
+      ],
+      "justification": "The image quality is limited, and it is difficult to determine the exact nature of the structures within the circle. It could be a projection artifact, a rotated image, or a result of poor exposure. Without clinical context, it is impossible to provide a definitive diagnosis.",
+      "limitations": [
+        "image quality",
+        "projection",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_016",
+    "image_path": "data/sample_images/CXR_SYN_016_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 1.0,\n  \"visual_evidence\": [\"The image shows a clear view of the chest structures.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray, showing the ribs, lungs, and heart. There are no obvious signs of opacity or other abnormalities.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 1.0,
+      "visual_evidence": [
+        "The image shows a clear view of the chest structures."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray, showing the ribs, lungs, and heart. There are no obvious signs of opacity or other abnormalities.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_017",
+    "image_path": "data/sample_images/CXR_SYN_017_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear view of the chest structures, including the heart, lungs, and major vessels.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with good image quality. The heart and lungs are visible, and there are no obvious signs of significant abnormalities.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear view of the chest structures, including the heart, lungs, and major vessels."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with good image quality. The heart and lungs are visible, and there are no obvious signs of significant abnormalities.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_018",
+    "image_path": "data/sample_images/CXR_SYN_018_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.0,\n  \"visual_evidence\": [\"The image shows a circular shape with some apparent structures within it.\"],\n  \"justification\": \"The image quality is limited, and it is difficult to discern any specific anatomical structures with certainty. The circular shape could be a projection artifact or a representation of a different imaging modality.\",\n  \"limitations\": [\"image quality\", \"projection\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.0,
+      "visual_evidence": [
+        "The image shows a circular shape with some apparent structures within it."
+      ],
+      "justification": "The image quality is limited, and it is difficult to discern any specific anatomical structures with certainty. The circular shape could be a projection artifact or a representation of a different imaging modality.",
+      "limitations": [
+        "image quality",
+        "projection",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_019",
+    "image_path": "data/sample_images/CXR_SYN_019_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear view of the chest with no obvious abnormalities.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear view of the chest with no obvious abnormalities."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_020",
+    "image_path": "data/sample_images/CXR_SYN_020_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear view of the chest structures, including the heart, lungs, and ribs.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with good image quality. The heart, lungs, and ribs are visible. There are no obvious signs of opacity or other abnormalities.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear view of the chest structures, including the heart, lungs, and ribs."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with good image quality. The heart, lungs, and ribs are visible. There are no obvious signs of opacity or other abnormalities.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_021",
+    "image_path": "data/sample_images/CXR_SYN_021_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "final",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.0,\n  \"visual_evidence\": [\"The image shows a circular shape with two darker areas that could represent lungs.\"],\n  \"justification\": \"The image quality is limited, and the circular shape with darker areas could be a projection or a technical artifact. It is difficult to determine if there is an actual abnormality.\",\n  \"limitations\": [\"image quality\", \"projection\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.0,
+      "visual_evidence": [
+        "The image shows a circular shape with two darker areas that could represent lungs."
+      ],
+      "justification": "The image quality is limited, and the circular shape with darker areas could be a projection or a technical artifact. It is difficult to determine if there is an actual abnormality.",
+      "limitations": [
+        "image quality",
+        "projection",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_022",
+    "image_path": "data/sample_images/CXR_SYN_022_normal.png",
+    "ground_truth": "normal",
+    "split": "final",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear view of the chest with no obvious abnormalities.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear view of the chest with no obvious abnormalities."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_023",
+    "image_path": "data/sample_images/CXR_SYN_023_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "final",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the heart and lungs.\", \"The heart appears to be in the center of the chest.\", \"The lungs appear clear.\"],\n  \"justification\": \"The image quality is good, and the heart and lungs are visible. There are no obvious signs of opacity or other abnormalities.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the heart and lungs.",
+        "The heart appears to be in the center of the chest.",
+        "The lungs appear clear."
+      ],
+      "justification": "The image quality is good, and the heart and lungs are visible. There are no obvious signs of opacity or other abnormalities.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_024",
+    "image_path": "data/sample_images/CXR_SYN_024_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "final",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.0,\n  \"visual_evidence\": [\"The image shows a circular shape with some apparent structures within it.\"],\n  \"justification\": \"The image quality is limited, and the structures within the circle are difficult to discern. It is possible that the image is a projection or a representation of a different anatomical structure.\",\n  \"limitations\": [\"image quality\", \"projection\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.0,
+      "visual_evidence": [
+        "The image shows a circular shape with some apparent structures within it."
+      ],
+      "justification": "The image quality is limited, and the structures within the circle are difficult to discern. It is possible that the image is a projection or a representation of a different anatomical structure.",
+      "limitations": [
+        "image quality",
+        "projection",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_025",
+    "image_path": "data/sample_images/CXR_SYN_025_normal.png",
+    "ground_truth": "normal",
+    "split": "final",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 1.0,\n  \"visual_evidence\": [\"The image shows a clear view of the chest with no obvious abnormalities.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 1.0,
+      "visual_evidence": [
+        "The image shows a clear view of the chest with no obvious abnormalities."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_026",
+    "image_path": "data/sample_images/CXR_SYN_026_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "final",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear view of the chest structures, including the heart, lungs, and ribs.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with good image quality. The heart, lungs, and ribs are visible. There are no obvious signs of opacity or other abnormalities.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear view of the chest structures, including the heart, lungs, and ribs."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with good image quality. The heart, lungs, and ribs are visible. There are no obvious signs of opacity or other abnormalities.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_027",
+    "image_path": "data/sample_images/CXR_SYN_027_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "final",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.0,\n  \"visual_evidence\": [\"The image shows a circular shape with some apparent structures within it.\"],\n  \"justification\": \"The image quality is limited, and the structures within the circle are difficult to discern. It is possible that the image is a projection or a representation of a normal anatomical structure.\",\n  \"limitations\": [\"image quality\", \"projection\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.0,
+      "visual_evidence": [
+        "The image shows a circular shape with some apparent structures within it."
+      ],
+      "justification": "The image quality is limited, and the structures within the circle are difficult to discern. It is possible that the image is a projection or a representation of a normal anatomical structure.",
+      "limitations": [
+        "image quality",
+        "projection",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_028",
+    "image_path": "data/sample_images/CXR_SYN_028_normal.png",
+    "ground_truth": "normal",
+    "split": "final",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear view of the chest with no obvious abnormalities.\"],\n  \"justification\": \"The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear view of the chest with no obvious abnormalities."
+      ],
+      "justification": "The image appears to be a frontal chest X-ray with no apparent opacities or other abnormalities. The image quality is good.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_029",
+    "image_path": "data/sample_images/CXR_SYN_029_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "final",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The heart appears to be in the center of the chest, and the lungs are visible.\"],\n  \"justification\": \"The image shows a clear view of the heart and lungs, suggesting no obvious abnormalities. The heart size appears normal, and the lungs are not obscured by any significant opacity.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The heart appears to be in the center of the chest, and the lungs are visible."
+      ],
+      "justification": "The image shows a clear view of the heart and lungs, suggesting no obvious abnormalities. The heart size appears normal, and the lungs are not obscured by any significant opacity.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_030",
+    "image_path": "data/sample_images/CXR_SYN_030_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "final",
+    "prompt_mode": "improved",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.0,\n  \"visual_evidence\": [\"The image shows a circular shape with some apparent structures within it.\"],\n  \"justification\": \"The image quality is limited, and the structures within the circle are difficult to discern. It is possible that the image is a projection or a representation of a normal anatomical structure.\",\n  \"limitations\": [\"image quality\", \"projection\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.0,
+      "visual_evidence": [
+        "The image shows a circular shape with some apparent structures within it."
+      ],
+      "justification": "The image quality is limited, and the structures within the circle are difficult to discern. It is possible that the image is a projection or a representation of a normal anatomical structure.",
+      "limitations": [
+        "image quality",
+        "projection",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  }
+]

@@ -1,0 +1,740 @@
+[
+  {
+    "case_id": "CXR_SYN_001",
+    "image_path": "data/sample_images/CXR_SYN_001_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the chest outline.\", \"The ribs and heart silhouette are visible.\"],\n  \"justification\": \"The image appears to show a normal chest outline with visible ribs and heart silhouette. No obvious abnormalities are apparent.\",\n  \"limitations\": [\"The image is a single frontal view, which limits the assessment of the entire lung field.\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the chest outline.",
+        "The ribs and heart silhouette are visible."
+      ],
+      "justification": "The image appears to show a normal chest outline with visible ribs and heart silhouette. No obvious abnormalities are apparent.",
+      "limitations": [
+        "The image is a single frontal view, which limits the assessment of the entire lung field."
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_002",
+    "image_path": "data/sample_images/CXR_SYN_002_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.7,\n  \"visual_evidence\": [\"Possible opacity in the lower lung field\"],\n  \"justification\": \"There is a possible opacity in the lower lung field, which could be consistent with pneumonia or other lung pathology. Further evaluation is needed to confirm the diagnosis.\",\n  \"limitations\": [\"Limited view of the lung fields\", \"No clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.7,
+      "visual_evidence": [
+        "Possible opacity in the lower lung field"
+      ],
+      "justification": "There is a possible opacity in the lower lung field, which could be consistent with pneumonia or other lung pathology. Further evaluation is needed to confirm the diagnosis.",
+      "limitations": [
+        "Limited view of the lung fields",
+        "No clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_003",
+    "image_path": "data/sample_images/CXR_SYN_003_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"limited image quality\", \"possible opacity\"],\n  \"justification\": \"The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the lower lung field, but this could be due to the limited image quality.\",\n  \"limitations\": [\"limited image quality\", \"possible opacity\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "limited image quality",
+        "possible opacity"
+      ],
+      "justification": "The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the lower lung field, but this could be due to the limited image quality.",
+      "limitations": [
+        "limited image quality",
+        "possible opacity"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_004",
+    "image_path": "data/sample_images/CXR_SYN_004_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"clear visualization of the heart and great vessels\", \"no obvious opacity or consolidation\"],\n  \"justification\": \"The image shows a clear view of the heart, lungs, and major vessels. There are no obvious signs of consolidation or opacity that would suggest pneumonia or other lung pathology.\",\n  \"limitations\": [\"image is a single view, a lateral view would be helpful for a more complete assessment\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "clear visualization of the heart and great vessels",
+        "no obvious opacity or consolidation"
+      ],
+      "justification": "The image shows a clear view of the heart, lungs, and major vessels. There are no obvious signs of consolidation or opacity that would suggest pneumonia or other lung pathology.",
+      "limitations": [
+        "image is a single view, a lateral view would be helpful for a more complete assessment"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_005",
+    "image_path": "data/sample_images/CXR_SYN_005_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the heart, lungs, and major vessels.\", \"The heart size appears within normal limits.\", \"There is no obvious consolidation or opacity.\"],\n  \"justification\": \"The image quality is good, and there are no obvious signs of pneumonia or other lung abnormalities. The heart size appears normal.\",\n  \"limitations\": [\"The image is a single frontal view, which limits the assessment of the entire lung field.\", \"The image is a grayscale image, which limits the assessment of subtle findings.\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the heart, lungs, and major vessels.",
+        "The heart size appears within normal limits.",
+        "There is no obvious consolidation or opacity."
+      ],
+      "justification": "The image quality is good, and there are no obvious signs of pneumonia or other lung abnormalities. The heart size appears normal.",
+      "limitations": [
+        "The image is a single frontal view, which limits the assessment of the entire lung field.",
+        "The image is a grayscale image, which limits the assessment of subtle findings."
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_006",
+    "image_path": "data/sample_images/CXR_SYN_006_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"limited image quality\", \"possible opacity\"],\n  \"justification\": \"The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the lower lung field, but this could be due to the limited image quality.\",\n  \"limitations\": [\"limited image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "limited image quality",
+        "possible opacity"
+      ],
+      "justification": "The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the lower lung field, but this could be due to the limited image quality.",
+      "limitations": [
+        "limited image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_007",
+    "image_path": "data/sample_images/CXR_SYN_007_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the rib cage and the heart silhouette.\", \"The lung fields appear clear.\"],\n  \"justification\": \"The image quality is good, and the lung fields appear clear. There are no obvious signs of opacity or consolidation.\",\n  \"limitations\": [\"The image is a single frontal view, which limits the assessment of the entire lung field.\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the rib cage and the heart silhouette.",
+        "The lung fields appear clear."
+      ],
+      "justification": "The image quality is good, and the lung fields appear clear. There are no obvious signs of opacity or consolidation.",
+      "limitations": [
+        "The image is a single frontal view, which limits the assessment of the entire lung field."
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_008",
+    "image_path": "data/sample_images/CXR_SYN_008_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.7,\n  \"visual_evidence\": [\"Possible opacity in the lower lung field\"],\n  \"justification\": \"The image shows a possible opacity in the lower lung field, which could be consistent with pneumonia or other lung pathology. Further evaluation is needed to confirm this finding.\",\n  \"limitations\": [\"Limited view of the lung fields\", \"No clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.7,
+      "visual_evidence": [
+        "Possible opacity in the lower lung field"
+      ],
+      "justification": "The image shows a possible opacity in the lower lung field, which could be consistent with pneumonia or other lung pathology. Further evaluation is needed to confirm this finding.",
+      "limitations": [
+        "Limited view of the lung fields",
+        "No clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_009",
+    "image_path": "data/sample_images/CXR_SYN_009_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"limited image quality\", \"possible outline of the heart and lungs\"],\n  \"justification\": \"The image quality is limited, making it difficult to assess for lung abnormalities. The image shows a possible outline of the heart and lungs, but further evaluation is needed to confirm the presence of any opacity or consolidation.\",\n  \"limitations\": [\"limited image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "limited image quality",
+        "possible outline of the heart and lungs"
+      ],
+      "justification": "The image quality is limited, making it difficult to assess for lung abnormalities. The image shows a possible outline of the heart and lungs, but further evaluation is needed to confirm the presence of any opacity or consolidation.",
+      "limitations": [
+        "limited image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_010",
+    "image_path": "data/sample_images/CXR_SYN_010_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"clear visualization of the heart and great vessels\", \"no obvious opacity or consolidation\"],\n  \"justification\": \"The image shows a clear view of the heart, lungs, and major vessels. There are no obvious signs of consolidation or opacity that would suggest pneumonia or other lung pathology.\",\n  \"limitations\": [\"image is a single view, without context\", \"no clinical history provided\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "clear visualization of the heart and great vessels",
+        "no obvious opacity or consolidation"
+      ],
+      "justification": "The image shows a clear view of the heart, lungs, and major vessels. There are no obvious signs of consolidation or opacity that would suggest pneumonia or other lung pathology.",
+      "limitations": [
+        "image is a single view, without context",
+        "no clinical history provided"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_011",
+    "image_path": "data/sample_images/CXR_SYN_011_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear view of the chest structures.\", \"The heart size appears within normal limits.\"],\n  \"justification\": \"The image quality is good, and the heart size appears normal. No obvious signs of opacity or consolidation are present.\",\n  \"limitations\": [\"The image is a single frontal view, which limits the assessment of the entire lung field.\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear view of the chest structures.",
+        "The heart size appears within normal limits."
+      ],
+      "justification": "The image quality is good, and the heart size appears normal. No obvious signs of opacity or consolidation are present.",
+      "limitations": [
+        "The image is a single frontal view, which limits the assessment of the entire lung field."
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_012",
+    "image_path": "data/sample_images/CXR_SYN_012_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"limited image quality\", \"possible opacity\"],\n  \"justification\": \"The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the lower lung field, but this could be due to the limited image quality.\",\n  \"limitations\": [\"limited image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "limited image quality",
+        "possible opacity"
+      ],
+      "justification": "The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the lower lung field, but this could be due to the limited image quality.",
+      "limitations": [
+        "limited image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_013",
+    "image_path": "data/sample_images/CXR_SYN_013_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the chest outline.\", \"The ribs and heart silhouette are visible.\"],\n  \"justification\": \"The image appears to show a normal chest X-ray with clear visualization of the rib cage and heart silhouette. No obvious abnormalities are present.\",\n  \"limitations\": [\"The image is a single view and lacks information from other lung fields.\", \"The image quality is good, but a more detailed examination is needed for a definitive assessment.\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the chest outline.",
+        "The ribs and heart silhouette are visible."
+      ],
+      "justification": "The image appears to show a normal chest X-ray with clear visualization of the rib cage and heart silhouette. No obvious abnormalities are present.",
+      "limitations": [
+        "The image is a single view and lacks information from other lung fields.",
+        "The image quality is good, but a more detailed examination is needed for a definitive assessment."
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_014",
+    "image_path": "data/sample_images/CXR_SYN_014_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.9,\n  \"visual_evidence\": [\"The image shows a clear view of the chest structures.\", \"There is no obvious opacity or consolidation.\"],\n  \"justification\": \"The image quality is good, and there are no obvious signs of pneumonia or other lung abnormalities. The structures appear normal.\",\n  \"limitations\": [\"The image is a single frontal view, which limits the assessment of the entire lung field.\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.9,
+      "visual_evidence": [
+        "The image shows a clear view of the chest structures.",
+        "There is no obvious opacity or consolidation."
+      ],
+      "justification": "The image quality is good, and there are no obvious signs of pneumonia or other lung abnormalities. The structures appear normal.",
+      "limitations": [
+        "The image is a single frontal view, which limits the assessment of the entire lung field."
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_015",
+    "image_path": "data/sample_images/CXR_SYN_015_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"limited image quality\", \"possible outline of the heart and lungs\"],\n  \"justification\": \"The image quality is limited, making it difficult to assess for lung abnormalities. The image shows a possible outline of the heart and lungs, but further evaluation is needed to confirm the presence of any opacity or other concerning findings.\",\n  \"limitations\": [\"limited image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "limited image quality",
+        "possible outline of the heart and lungs"
+      ],
+      "justification": "The image quality is limited, making it difficult to assess for lung abnormalities. The image shows a possible outline of the heart and lungs, but further evaluation is needed to confirm the presence of any opacity or other concerning findings.",
+      "limitations": [
+        "limited image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_016",
+    "image_path": "data/sample_images/CXR_SYN_016_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the chest outline.\", \"The ribs and heart silhouette are visible.\"],\n  \"justification\": \"The image appears to show a normal chest outline with no obvious abnormalities. The ribs and heart silhouette are present.\",\n  \"limitations\": [\"The image is a single frontal view, which limits the assessment of the lung fields.\", \"The image quality is good, but a more detailed examination is needed for a definitive diagnosis.\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the chest outline.",
+        "The ribs and heart silhouette are visible."
+      ],
+      "justification": "The image appears to show a normal chest outline with no obvious abnormalities. The ribs and heart silhouette are present.",
+      "limitations": [
+        "The image is a single frontal view, which limits the assessment of the lung fields.",
+        "The image quality is good, but a more detailed examination is needed for a definitive diagnosis."
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_017",
+    "image_path": "data/sample_images/CXR_SYN_017_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the heart and lungs.\", \"The heart appears to be in a normal position.\"],\n  \"justification\": \"The image quality is good, and the heart appears to be in a normal position. There are no obvious signs of opacity or consolidation.\",\n  \"limitations\": [\"The image is a single frontal view, which limits the assessment of the entire lung field.\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the heart and lungs.",
+        "The heart appears to be in a normal position."
+      ],
+      "justification": "The image quality is good, and the heart appears to be in a normal position. There are no obvious signs of opacity or consolidation.",
+      "limitations": [
+        "The image is a single frontal view, which limits the assessment of the entire lung field."
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_018",
+    "image_path": "data/sample_images/CXR_SYN_018_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"limited image quality\", \"possible opacity\"],\n  \"justification\": \"The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the lower lung field, but this could be due to the limited image quality.\",\n  \"limitations\": [\"limited image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "limited image quality",
+        "possible opacity"
+      ],
+      "justification": "The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the lower lung field, but this could be due to the limited image quality.",
+      "limitations": [
+        "limited image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_019",
+    "image_path": "data/sample_images/CXR_SYN_019_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the rib cage and the heart silhouette.\", \"The lung fields appear clear.\"],\n  \"justification\": \"The image quality is good, and the lung fields appear clear. There are no obvious signs of opacity or consolidation.\",\n  \"limitations\": [\"The image is a single frontal view, which limits the assessment of the entire lung field.\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the rib cage and the heart silhouette.",
+        "The lung fields appear clear."
+      ],
+      "justification": "The image quality is good, and the lung fields appear clear. There are no obvious signs of opacity or consolidation.",
+      "limitations": [
+        "The image is a single frontal view, which limits the assessment of the entire lung field."
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_020",
+    "image_path": "data/sample_images/CXR_SYN_020_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.7,\n  \"visual_evidence\": [\"Possible opacity in the lower lung field\"],\n  \"justification\": \"The image shows a possible opacity in the lower lung field, which could be consistent with pneumonia or other lung pathology. Further evaluation is needed to confirm this finding.\",\n  \"limitations\": [\"Limited view of the lung fields\", \"No clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.7,
+      "visual_evidence": [
+        "Possible opacity in the lower lung field"
+      ],
+      "justification": "The image shows a possible opacity in the lower lung field, which could be consistent with pneumonia or other lung pathology. Further evaluation is needed to confirm this finding.",
+      "limitations": [
+        "Limited view of the lung fields",
+        "No clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_021",
+    "image_path": "data/sample_images/CXR_SYN_021_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "final",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"limited image quality\", \"possible lung structures visible\"],\n  \"justification\": \"The image quality is limited, making it difficult to assess for lung abnormalities. There are some structures that could be interpreted as lung fields, but further evaluation is needed.\",\n  \"limitations\": [\"limited image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "limited image quality",
+        "possible lung structures visible"
+      ],
+      "justification": "The image quality is limited, making it difficult to assess for lung abnormalities. There are some structures that could be interpreted as lung fields, but further evaluation is needed.",
+      "limitations": [
+        "limited image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_022",
+    "image_path": "data/sample_images/CXR_SYN_022_normal.png",
+    "ground_truth": "normal",
+    "split": "final",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the chest outline.\", \"The ribs and clavicles are visible.\"],\n  \"justification\": \"The image appears to show a normal chest outline with visible ribs and clavicles. No obvious abnormalities are apparent.\",\n  \"limitations\": [\"The image is a single frontal view, which limits the assessment of the lung fields.\", \"The image quality is good, but a more detailed examination is needed for a definitive diagnosis.\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the chest outline.",
+        "The ribs and clavicles are visible."
+      ],
+      "justification": "The image appears to show a normal chest outline with visible ribs and clavicles. No obvious abnormalities are apparent.",
+      "limitations": [
+        "The image is a single frontal view, which limits the assessment of the lung fields.",
+        "The image quality is good, but a more detailed examination is needed for a definitive diagnosis."
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_023",
+    "image_path": "data/sample_images/CXR_SYN_023_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "final",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the chest structures, including the heart and lungs.\", \"The heart appears to be in a normal position.\", \"The lungs appear clear.\"],\n  \"justification\": \"The image quality is good, and the heart and lungs appear normal. There are no obvious signs of opacity or consolidation.\",\n  \"limitations\": [\"The image is a single frontal view, which limits the assessment of the entire lung field.\", \"The image is a grayscale image, which limits the assessment of subtle findings.\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the chest structures, including the heart and lungs.",
+        "The heart appears to be in a normal position.",
+        "The lungs appear clear."
+      ],
+      "justification": "The image quality is good, and the heart and lungs appear normal. There are no obvious signs of opacity or consolidation.",
+      "limitations": [
+        "The image is a single frontal view, which limits the assessment of the entire lung field.",
+        "The image is a grayscale image, which limits the assessment of subtle findings."
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_024",
+    "image_path": "data/sample_images/CXR_SYN_024_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "final",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"limited image quality\", \"possible opacity\"],\n  \"justification\": \"The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the central region of the chest, but this could be due to the image quality or other factors.\",\n  \"limitations\": [\"limited image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "limited image quality",
+        "possible opacity"
+      ],
+      "justification": "The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the central region of the chest, but this could be due to the image quality or other factors.",
+      "limitations": [
+        "limited image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_025",
+    "image_path": "data/sample_images/CXR_SYN_025_normal.png",
+    "ground_truth": "normal",
+    "split": "final",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"clear visualization of the heart and mediastinum\", \"no obvious opacity or consolidation\"],\n  \"justification\": \"The image shows a clear view of the heart, mediastinum, and lungs. There are no obvious signs of consolidation or opacity that would suggest pneumonia or other lung pathology. The image quality is good.\",\n  \"limitations\": [\"no patient history\", \"no clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "clear visualization of the heart and mediastinum",
+        "no obvious opacity or consolidation"
+      ],
+      "justification": "The image shows a clear view of the heart, mediastinum, and lungs. There are no obvious signs of consolidation or opacity that would suggest pneumonia or other lung pathology. The image quality is good.",
+      "limitations": [
+        "no patient history",
+        "no clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_026",
+    "image_path": "data/sample_images/CXR_SYN_026_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "final",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.7,\n  \"visual_evidence\": [\"Possible opacity in the right lower lung field\"],\n  \"justification\": \"The image shows a possible opacity in the right lower lung field. This could be due to various factors, including pneumonia, atelectasis, or other lung pathology. Further evaluation is needed to determine the exact cause.\",\n  \"limitations\": [\"Limited information about the patient's history and clinical presentation\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.7,
+      "visual_evidence": [
+        "Possible opacity in the right lower lung field"
+      ],
+      "justification": "The image shows a possible opacity in the right lower lung field. This could be due to various factors, including pneumonia, atelectasis, or other lung pathology. Further evaluation is needed to determine the exact cause.",
+      "limitations": [
+        "Limited information about the patient's history and clinical presentation"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_027",
+    "image_path": "data/sample_images/CXR_SYN_027_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "final",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"limited image quality\", \"possible opacity\"],\n  \"justification\": \"The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the central region of the chest, but this could be due to the image quality or other factors.\",\n  \"limitations\": [\"limited image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "limited image quality",
+        "possible opacity"
+      ],
+      "justification": "The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the central region of the chest, but this could be due to the image quality or other factors.",
+      "limitations": [
+        "limited image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_028",
+    "image_path": "data/sample_images/CXR_SYN_028_normal.png",
+    "ground_truth": "normal",
+    "split": "final",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the rib cage and the heart silhouette.\", \"The lung fields appear clear.\"],\n  \"justification\": \"The image quality is good, and the lung fields appear clear. There are no obvious signs of opacity or consolidation.\",\n  \"limitations\": [\"The image is a single frontal view, which limits the assessment of the entire lung field.\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the rib cage and the heart silhouette.",
+        "The lung fields appear clear."
+      ],
+      "justification": "The image quality is good, and the lung fields appear clear. There are no obvious signs of opacity or consolidation.",
+      "limitations": [
+        "The image is a single frontal view, which limits the assessment of the entire lung field."
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_029",
+    "image_path": "data/sample_images/CXR_SYN_029_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "final",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows the heart and lungs.\", \"The heart appears to be in a normal position.\"],\n  \"justification\": \"The image quality is good, and the heart appears to be in a normal position. There are no obvious signs of opacity or consolidation.\",\n  \"limitations\": [\"The image is a single frontal view, which limits the assessment of the entire lung field.\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows the heart and lungs.",
+        "The heart appears to be in a normal position."
+      ],
+      "justification": "The image quality is good, and the heart appears to be in a normal position. There are no obvious signs of opacity or consolidation.",
+      "limitations": [
+        "The image is a single frontal view, which limits the assessment of the entire lung field."
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_030",
+    "image_path": "data/sample_images/CXR_SYN_030_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "final",
+    "prompt_mode": "baseline",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"limited image quality\", \"possible opacity\"],\n  \"justification\": \"The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the lower lung field, but this could be due to the limited image quality.\",\n  \"limitations\": [\"limited image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "limited image quality",
+        "possible opacity"
+      ],
+      "justification": "The image quality is limited, making it difficult to assess for lung abnormalities. There is a possible opacity in the lower lung field, but this could be due to the limited image quality.",
+      "limitations": [
+        "limited image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  }
+]
