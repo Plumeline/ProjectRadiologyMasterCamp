@@ -5,7 +5,7 @@ import shutil
 from pathlib import Path
 from fastapi import FastAPI, File, UploadFile
 
-from src.inference import toy_predict
+from src.inference import predict as run_prediction
 from src.guardrails import apply_safety_guardrails
 
 app = FastAPI(title="Assistant radiologue virtuel EFREI", version="0.1.0")
@@ -27,5 +27,5 @@ async def predict(file: UploadFile = File(...)) -> dict:
     target = UPLOAD_DIR / f"uploaded_{safe_stem}{suffix}"
     with target.open("wb") as f:
         shutil.copyfileobj(file.file, f)
-    pred = toy_predict(target, mode="improved")
+    pred = run_prediction(target, mode="improved_v3")
     return apply_safety_guardrails(pred)

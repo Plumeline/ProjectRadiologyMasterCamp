@@ -9,7 +9,7 @@ from .preprocessing import basic_quality_flag
 
 WARNING = "Prototype pédagogique. Non destiné au diagnostic. Validation par un professionnel qualifié requise."
 
-# Directory holding the offline MedGemma batch outputs
+# Directory holding the offline MedGemma batch outputs (Phase 2).
 _CACHE_DIR = Path(__file__).resolve().parents[1] / "eval" / "cached_predictions"
 # Lazily loaded: {mode: {image_filename: prediction_dict}}
 _CACHE: dict[str, dict[str, dict[str, Any]]] = {}
@@ -85,18 +85,42 @@ def _load_cache(mode: str) -> dict[str, dict[str, Any]]:
     return index
 
 
+def _lookup_key(image_path: str | Path, index: dict[str, dict[str, Any]]) -> str | None:
+    """Resolve an image path to a cache key, tolerant of API upload renaming.
+
+    The API saves uploads as 'uploaded_<originalstem><suffix>'. We try the exact
+    filename first, then strip a leading 'uploaded_' prefix, then match on stem.
+    """
+    name = Path(image_path).name
+    if name in index:
+        return name
+    # strip the API's 'uploaded_' prefix if present
+    if name.startswith("uploaded_"):
+        stripped = name[len("uploaded_"):]
+        if stripped in index:
+            return stripped
+    # last resort: match on stem (filename without extension)
+    stem = Path(name).stem
+    if stem.startswith("uploaded_"):
+        stem = stem[len("uploaded_"):]
+    for key in index:
+        if Path(key).stem == stem:
+            return key
+    return None
+
+
 def cached_predict(image_path: str | Path, mode: str = "baseline") -> dict[str, Any]:
     """Return the pre-computed MedGemma prediction for this image and mode.
 
-    The heavy VLM inference was run once offline (on Google collab). Here we just look
+    The heavy VLM inference was run once offline (Phase 2). Here we just look
     up the result and shape it to the same schema as toy_predict, so the API,
     the app and the evaluation are all CPU-only.
     """
     start = time.perf_counter()
     index = _load_cache(mode)
-    key = Path(image_path).name
+    key = _lookup_key(image_path, index)
 
-    if key not in index:
+    if key is None:
         # Image has no cached result: fall back to a safe 'uncertain'.
         latency_ms = int((time.perf_counter() - start) * 1000)
         return {
@@ -104,7 +128,7 @@ def cached_predict(image_path: str | Path, mode: str = "baseline") -> dict[str, 
             "predicted_class": "uncertain",
             "confidence": 0.0,
             "visual_evidence": [],
-            "justification": f"No cached MedGemma prediction found for {key}.",
+            "justification": f"No cached MedGemma prediction found for {Path(image_path).name}.",
             "limitations": ["missing cached prediction"],
             "warning": WARNING,
             "model_name": f"medgemma-4b-it-{mode}",
@@ -141,5 +165,5 @@ def predict(image_path: str | Path, mode: str = "baseline") -> dict[str, Any]:
     try:
         return cached_predict(image_path, mode=mode)
     except FileNotFoundError:
-        # No cache available (e.g. fresh checkout): stay runnable.
+        # No cache available (e.g. fresh checkout before Phase 2): stay runnable.
         return toy_predict(image_path, mode=mode)
