@@ -166,10 +166,15 @@ ul li { color: #94a3b8; margin-bottom: 0.3rem; }
 
 # ── Sidebar ──────────────────────────────────────────────────────────────────
 with st.sidebar:
+    logo_path = Path(__file__).resolve().parent / "data" / "logo.jpeg"
+    if logo_path.exists():
+        st.image(str(logo_path), use_container_width=True)
+    else:
+        st.markdown("<div style='text-align:center; font-size:2.5rem;'>🩻</div>", unsafe_allow_html=True)
+        
     st.markdown("""
     <div style="text-align:center; padding-bottom: 1rem;">
-        <div style="font-size:2.5rem; margin-bottom:4px;">🩻</div>
-        <div style="font-size:1.1rem; font-weight:800; color:#f1f5f9; letter-spacing:-0.5px;">HEALTH <span style='color:#00d4aa'>&</span> IA</div>
+        <div style="font-size:1.1rem; font-weight:800; color:#f1f5f9; letter-spacing:-0.5px; margin-top:8px;">HEALTH <span style='color:#00d4aa'>&</span> IA</div>
         <div style="font-size:0.65rem; color:#00d4aa; letter-spacing:2px; text-transform:uppercase; margin-top:2px;">EFREI · 2025–2026</div>
     </div>
     <hr style="border-color:rgba(0,212,170,0.2); margin: 0.5rem 0 1rem 0;">
