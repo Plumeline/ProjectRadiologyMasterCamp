@@ -13,7 +13,7 @@ from src.guardrails import apply_safety_guardrails
 from src.database import insert_run, init_db
 
 st.set_page_config(
-    page_title="Assistant Radiologue Virtuel — EFREI",
+    page_title="HEALTH & IA — EFREI",
     page_icon="🩻",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -169,13 +169,13 @@ with st.sidebar:
     st.markdown("""
     <div style="text-align:center; padding-bottom: 1rem;">
         <div style="font-size:2.5rem; margin-bottom:4px;">🩻</div>
-        <div style="font-size:1rem; font-weight:700; color:#f1f5f9; letter-spacing:-0.5px;">Radiologue Virtuel</div>
+        <div style="font-size:1.1rem; font-weight:800; color:#f1f5f9; letter-spacing:-0.5px;">HEALTH <span style='color:#00d4aa'>&</span> IA</div>
         <div style="font-size:0.65rem; color:#00d4aa; letter-spacing:2px; text-transform:uppercase; margin-top:2px;">EFREI · 2025–2026</div>
     </div>
     <hr style="border-color:rgba(0,212,170,0.2); margin: 0.5rem 0 1rem 0;">
     """, unsafe_allow_html=True)
 
-    page = st.radio("Navigation", ["🔬 Analyser une radio", "📊 Tableau de bord"], label_visibility="collapsed")
+    page = st.radio("Navigation", ["🔬 Analyser une radio", "📊 Tableau de bord", "📖 Guide d'utilisation"], label_visibility="collapsed")
 
     st.markdown("""
     <hr style="border-color:rgba(255,255,255,0.06); margin: 1.5rem 0 1rem 0;">
@@ -227,7 +227,7 @@ if page == "🔬 Analyser une radio":
     with col_upload:
         uploaded = st.file_uploader("Radiographie thoracique frontale", type=["png", "jpg", "jpeg"], label_visibility="collapsed")
     with col_mode:
-        mode = st.selectbox("Mode d'analyse", ["baseline", "improved"])
+        mode = st.radio("Mode d'analyse", ["baseline", "improved"], horizontal=True)
 
     if uploaded:
         tmp_dir = Path(tempfile.gettempdir())
@@ -291,6 +291,107 @@ if page == "🔬 Analyser une radio":
             </div>
         </div>
         """, unsafe_allow_html=True)
+
+# ── Page : Guide d'utilisation ────────────────────────────────────────────
+elif page == "📖 Guide d'utilisation":
+
+    st.markdown("""
+    <div style="padding: 0.5rem 0 1.5rem 0;">
+        <h1 style="margin:0; font-size:2rem;">📖 Guide d'utilisation</h1>
+        <p style="color:#475569; margin-top:4px; font-size:0.9rem;">Tout ce qu'il faut savoir pour utiliser HEALTH & IA.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ── Présentation ──
+    st.markdown("""
+    <div style="background:rgba(0,212,170,0.06); border:1px solid rgba(0,212,170,0.2);
+                border-radius:16px; padding:24px 28px; margin-bottom:1.5rem;">
+        <div style="font-size:1.1rem; font-weight:700; color:#00d4aa; margin-bottom:8px;">🩺 Qu'est-ce que HEALTH & IA ?</div>
+        <div style="color:#94a3b8; line-height:1.8; font-size:0.95rem;">
+            <b style="color:#e2e8f0;">HEALTH & IA</b> est un prototype pédagogique d'intelligence artificielle médicale développé dans le cadre
+            du MasterCamp EFREI 2025–2026. Il analyse des radiographies thoraciques frontales et retourne
+            un résultat structuré en trois classes possibles, accompagné d'une justification et de métadonnées traçables.
+            <br><br>
+            ⚠️ <b style="color:#fbbf24;">Ce prototype n'est pas un outil de diagnostic médical.</b>
+            Toute interprétation doit être validée par un professionnel de santé qualifié.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ── Étapes ──
+    st.markdown("### 🚀 Comment utiliser l'application ?")
+
+    steps = [
+        ("1", "#00d4aa", "Choisir votre image",
+         "Rendez-vous sur l'onglet <b>🔬 Analyser une radio</b>. Déposez une radiographie thoracique frontale au format PNG ou JPG dans la zone de dépôt. Des images de test sont disponibles dans le dossier <code style='color:#00d4aa'>data/sample_images/</code>."),
+        ("2", "#0891b2", "Sélectionner le mode d'analyse",
+         "Choisissez entre deux modes :<br>• <b style='color:#e2e8f0;'>Baseline</b> — prompt standard, résultat de référence.<br>• <b style='color:#e2e8f0;'>Improved</b> — prompt renforcé avec règle d'incertitude, résultat plus prudent."),
+        ("3", "#6366f1", "Lire les résultats",
+         "L'IA retourne une <b>classe prédite</b> parmi trois possibilités, un <b>score de confiance</b> et la <b>qualité détectée de l'image</b>. Les observations visuelles, la justification et les limites du modèle sont également affichées."),
+        ("4", "#f59e0b", "Consulter le tableau de bord",
+         "L'onglet <b>📊 Tableau de bord</b> centralise toutes les analyses effectuées : KPIs, graphiques de répartition, évolution de la confiance et historique détaillé. Vous pouvez exporter l'historique complet en CSV."),
+    ]
+
+    for num, color, title, desc in steps:
+        st.markdown(f"""
+        <div style="display:flex; gap:16px; align-items:flex-start; margin-bottom:16px;
+                    background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);
+                    border-radius:14px; padding:20px 22px;">
+            <div style="min-width:36px; height:36px; border-radius:50%; background:{color}22;
+                        border:2px solid {color}; display:flex; align-items:center;
+                        justify-content:center; font-weight:800; color:{color}; font-size:1rem;">{num}</div>
+            <div>
+                <div style="font-weight:700; color:#e2e8f0; font-size:1rem; margin-bottom:6px;">{title}</div>
+                <div style="color:#94a3b8; font-size:0.88rem; line-height:1.7;">{desc}</div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # ── Classes ──
+    st.markdown("### 🏷️ Les 3 classes possibles")
+    col_c1, col_c2, col_c3 = st.columns(3)
+    with col_c1:
+        st.markdown("""
+        <div style="background:rgba(34,197,94,0.08); border:1px solid rgba(34,197,94,0.3);
+                    border-radius:14px; padding:20px; text-align:center;">
+            <div style="font-size:2rem;">✅</div>
+            <div style="font-weight:800; color:#22c55e; font-size:1.1rem; margin:8px 0 6px 0;">NORMAL</div>
+            <div style="color:#64748b; font-size:0.82rem; line-height:1.6;">Aucune opacité suspecte détectée. Radiographie dans les limites attendues.</div>
+        </div>
+        """, unsafe_allow_html=True)
+    with col_c2:
+        st.markdown("""
+        <div style="background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.3);
+                    border-radius:14px; padding:20px; text-align:center;">
+            <div style="font-size:2rem;">⚠️</div>
+            <div style="font-weight:800; color:#f59e0b; font-size:1.1rem; margin:8px 0 6px 0;">SUSPECTED OPACITY</div>
+            <div style="color:#64748b; font-size:0.82rem; line-height:1.6;">Région suspecte détectée. Une consultation médicale est fortement recommandée.</div>
+        </div>
+        """, unsafe_allow_html=True)
+    with col_c3:
+        st.markdown("""
+        <div style="background:rgba(148,163,184,0.08); border:1px solid rgba(148,163,184,0.25);
+                    border-radius:14px; padding:20px; text-align:center;">
+            <div style="font-size:2rem;">❓</div>
+            <div style="font-weight:800; color:#94a3b8; font-size:1.1rem; margin:8px 0 6px 0;">UNCERTAIN</div>
+            <div style="color:#64748b; font-size:0.82rem; line-height:1.6;">Le modèle ne peut pas trancher. Image de qualité insuffisante ou cas ambigu.</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # ── Limites ──
+    st.divider()
+    st.markdown("""
+    <div style="background:rgba(239,68,68,0.06); border:1px solid rgba(239,68,68,0.2);
+                border-radius:14px; padding:20px 24px;">
+        <div style="font-weight:700; color:#f87171; margin-bottom:10px;">⛔ Limites importantes à connaître</div>
+        <ul style="color:#94a3b8; font-size:0.88rem; line-height:2; margin:0; padding-left:1.2rem;">
+            <li>Ce prototype utilise un <b style='color:#e2e8f0;'>modèle jouet</b> — les résultats sont simulés à des fins pédagogiques.</li>
+            <li>Il n'a <b style='color:#e2e8f0;'>aucune valeur diagnostique</b> réelle et ne remplace pas un radiologue.</li>
+            <li>Les images doivent être des <b style='color:#e2e8f0;'>radiographies thoraciques frontales</b> uniquement.</li>
+            <li>Les résultats sont <b style='color:#e2e8f0;'>tracés en base SQLite</b> localement à des fins d'audit et de recherche.</li>
+        </ul>
+    </div>
+    """, unsafe_allow_html=True)
 
 # ── Page : Dashboard ───────────────────────────────────────────────────────
 else:
