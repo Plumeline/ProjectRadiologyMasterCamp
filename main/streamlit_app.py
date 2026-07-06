@@ -8,7 +8,9 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 
-from src.inference import toy_predict
+
+
+from src.inference import predict
 from src.guardrails import apply_safety_guardrails
 from src.database import insert_run, init_db
 
@@ -232,7 +234,7 @@ if page == "🔬 Analyser une radio":
     with col_upload:
         uploaded = st.file_uploader("Radiographie thoracique frontale", type=["png", "jpg", "jpeg"], label_visibility="collapsed")
     with col_mode:
-        mode = st.radio("Mode d'analyse", ["baseline", "improved"], horizontal=True)
+        mode = st.radio("Mode d'analyse", ["improved_v3", "baseline", "improved", "improved_v2"], horizontal=True)
 
     if uploaded:
         tmp_dir = Path(tempfile.gettempdir())
@@ -246,7 +248,7 @@ if page == "🔬 Analyser une radio":
 
         with col_res:
             with st.spinner("Analyse en cours..."):
-                pred = apply_safety_guardrails(toy_predict(tmp_path, mode=mode))
+                pred = apply_safety_guardrails(predict(tmp_path, mode=mode))
                 case_id = f"web_{Path(uploaded.name).stem}_{int(time.time())}"
                 insert_run(DB_PATH, case_id, str(tmp_path), pred, dataset_source="web_upload")
 

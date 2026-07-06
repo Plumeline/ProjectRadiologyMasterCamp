@@ -6,7 +6,7 @@ import time
 from pathlib import Path
 from fastapi import FastAPI, File, UploadFile
 
-from src.inference import toy_predict
+from src.inference import predict as run_prediction
 from src.guardrails import apply_safety_guardrails
 from src.database import insert_run
 
@@ -31,7 +31,7 @@ async def predict(file: UploadFile = File(...)) -> dict:
     with target.open("wb") as f:
         shutil.copyfileobj(file.file, f)
     
-    pred = apply_safety_guardrails(toy_predict(target, mode="improved"))
+    pred = apply_safety_guardrails(run_prediction(target, mode="improved_v3"))
     
     # Save the run to the database
     case_id = f"api_{safe_stem}_{int(time.time())}"

@@ -9,7 +9,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.append(str(ROOT))
 
-from src.inference import toy_predict
+from src.inference import predict
 from src.guardrails import apply_safety_guardrails, validate_prediction
 from src.metrics import summarize_metrics
 from src.database import insert_run, init_db
@@ -28,13 +28,14 @@ def write_csv(path: Path, rows: list[dict]) -> None:
         w.writeheader(); w.writerows(rows)
 
 
-def run(mode: str, db_path: Path) -> tuple[list[dict], dict]:
+def run(mode: str, db_path: Path, use_toy: bool = False) -> tuple[list[dict], dict]:
     cases = read_cases(ROOT / 'data' / 'synthetic_cases.csv')
     rows = []
     init_db(db_path)
+    predict_mode = 'toy' if use_toy else mode
     for case in cases:
         image_path = ROOT / case['image_path']
-        pred = apply_safety_guardrails(toy_predict(image_path, mode=mode))
+        pred = apply_safety_guardrails(predict(image_path, mode=predict_mode))
         valid, errors = validate_prediction(pred)
         row = {
             'case_id': case['case_id'],
@@ -54,16 +55,17 @@ def run(mode: str, db_path: Path) -> tuple[list[dict], dict]:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument('--mode', choices=['toy', 'baseline', 'improved'], default='toy')
+    parser.add_argument('--mode', choices=['toy', 'baseline', 'improved', 'improved_v2', 'improved_v3'], default='toy')
     parser.add_argument('--out-dir', type=Path, default=ROOT / 'eval' / 'outputs')
     parser.add_argument('--db-path', type=Path, default=ROOT / 'medical_ai_evidence.sqlite')
     args = parser.parse_args()
     out_dir = args.out_dir
     out_dir.mkdir(parents=True, exist_ok=True)
-    modes = ['baseline', 'improved'] if args.mode == 'toy' else [args.mode]
+    use_toy = args.mode == 'toy'
+    modes = ['baseline', 'improved'] if use_toy else [args.mode]
     summary = []
     for mode in modes:
-        rows, metrics = run(mode, args.db_path)
+        rows, metrics = run(mode, args.db_path, use_toy=use_toy)
         write_csv(out_dir / f'{mode}_predictions.csv', rows)
         (out_dir / f'{mode}_metrics.json').write_text(json.dumps(metrics, indent=2), encoding='utf-8')
         summary.append({'mode': mode, **metrics})

@@ -1,0 +1,727 @@
+[
+  {
+    "case_id": "CXR_SYN_001",
+    "image_path": "data/sample_images/CXR_SYN_001_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear, circular shape with distinct lines.\", \"The image appears to be a representation of a cross-sectional view.\"],\n  \"justification\": \"The image shows a clear, circular shape with distinct lines. The image appears to be a representation of a cross-sectional view. The lungs appear clear.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear, circular shape with distinct lines.",
+        "The image appears to be a representation of a cross-sectional view."
+      ],
+      "justification": "The image shows a clear, circular shape with distinct lines. The image appears to be a representation of a cross-sectional view. The lungs appear clear.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_002",
+    "image_path": "data/sample_images/CXR_SYN_002_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"a visible opacity in the central region of the chest\"],\n  \"justification\": \"The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality. Further evaluation is needed to determine the nature of this opacity.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "a visible opacity in the central region of the chest"
+      ],
+      "justification": "The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality. Further evaluation is needed to determine the nature of this opacity.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_003",
+    "image_path": "data/sample_images/CXR_SYN_003_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a possible opacity, but the quality is limited, making it difficult to determine the nature of the finding.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a possible opacity, but the quality is limited, making it difficult to determine the nature of the finding.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_004",
+    "image_path": "data/sample_images/CXR_SYN_004_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear, circular shape with prominent lines.\", \"The image appears to be a representation of a cross-sectional view.\"],\n  \"justification\": \"The image shows a clear, circular shape with prominent lines. The image appears to be a representation of a cross-sectional view. The lungs appear clear.\",\n  \"limitations\": [\"image quality\", \"projection\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear, circular shape with prominent lines.",
+        "The image appears to be a representation of a cross-sectional view."
+      ],
+      "justification": "The image shows a clear, circular shape with prominent lines. The image appears to be a representation of a cross-sectional view. The lungs appear clear.",
+      "limitations": [
+        "image quality",
+        "projection",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_005",
+    "image_path": "data/sample_images/CXR_SYN_005_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_006",
+    "image_path": "data/sample_images/CXR_SYN_006_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a dense opacity, which could be a sign of a lung abnormality. However, the image quality is limited, making it difficult to determine the exact nature of the opacity.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a dense opacity, which could be a sign of a lung abnormality. However, the image quality is limited, making it difficult to determine the exact nature of the opacity.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_007",
+    "image_path": "data/sample_images/CXR_SYN_007_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear, circular shape with a central darker area and lighter outer edges.\"],\n  \"justification\": \"The image appears to be a clear representation of a circular shape, with a central darker area and lighter outer edges. There are no obvious abnormalities visible in the lungs.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear, circular shape with a central darker area and lighter outer edges."
+      ],
+      "justification": "The image appears to be a clear representation of a circular shape, with a central darker area and lighter outer edges. There are no obvious abnormalities visible in the lungs.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_008",
+    "image_path": "data/sample_images/CXR_SYN_008_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"a visible opacity in the central region of the chest\"],\n  \"justification\": \"The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality. Further evaluation is needed to determine the nature of this opacity.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "a visible opacity in the central region of the chest"
+      ],
+      "justification": "The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality. Further evaluation is needed to determine the nature of this opacity.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_009",
+    "image_path": "data/sample_images/CXR_SYN_009_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.6,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a dense opacity, which could represent a consolidation or other abnormality. The image quality is limited, making it difficult to assess the nature of the opacity.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.6,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a dense opacity, which could represent a consolidation or other abnormality. The image quality is limited, making it difficult to assess the nature of the opacity.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_010",
+    "image_path": "data/sample_images/CXR_SYN_010_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a distinct opacity, which could represent a mass or other abnormality. The image quality is good.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a distinct opacity, which could represent a mass or other abnormality. The image quality is good.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_011",
+    "image_path": "data/sample_images/CXR_SYN_011_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"a visible opacity is present in the central region of the chest\"],\n  \"justification\": \"The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality. Further evaluation is needed to determine the nature of this opacity.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "a visible opacity is present in the central region of the chest"
+      ],
+      "justification": "The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality. Further evaluation is needed to determine the nature of this opacity.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_012",
+    "image_path": "data/sample_images/CXR_SYN_012_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a definite opacity, which could be a nodule or other abnormality. However, the image quality is limited, making it difficult to determine the exact nature of the opacity.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a definite opacity, which could be a nodule or other abnormality. However, the image quality is limited, making it difficult to determine the exact nature of the opacity.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_013",
+    "image_path": "data/sample_images/CXR_SYN_013_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear, circular shape with a central darker area and a lighter ring around it.\"],\n  \"justification\": \"The image appears to be a clear representation of a circular shape with a central darker area and a lighter ring around it. There are no obvious signs of opacity or abnormality in the lung fields.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear, circular shape with a central darker area and a lighter ring around it."
+      ],
+      "justification": "The image appears to be a clear representation of a circular shape with a central darker area and a lighter ring around it. There are no obvious signs of opacity or abnormality in the lung fields.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_014",
+    "image_path": "data/sample_images/CXR_SYN_014_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_015",
+    "image_path": "data/sample_images/CXR_SYN_015_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a dense opacity, which could be a sign of a mass or other abnormality. However, the image quality is limited, and it is difficult to determine the exact nature of the opacity.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a dense opacity, which could be a sign of a mass or other abnormality. However, the image quality is limited, and it is difficult to determine the exact nature of the opacity.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_016",
+    "image_path": "data/sample_images/CXR_SYN_016_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear, circular shape with lines emanating from it.\"],\n  \"justification\": \"The image appears to be a clear representation of a circular shape with lines, suggesting a possible medical device or a stylized image. No obvious abnormalities are visible in the lungs.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear, circular shape with lines emanating from it."
+      ],
+      "justification": "The image appears to be a clear representation of a circular shape with lines, suggesting a possible medical device or a stylized image. No obvious abnormalities are visible in the lungs.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_017",
+    "image_path": "data/sample_images/CXR_SYN_017_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"A clear image of the chest with no obvious abnormalities.\"],\n  \"justification\": \"The image shows a clear view of the chest, with no visible opacities or densities. The lungs appear clear, and the heart size is within normal limits.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "A clear image of the chest with no obvious abnormalities."
+      ],
+      "justification": "The image shows a clear view of the chest, with no visible opacities or densities. The lungs appear clear, and the heart size is within normal limits.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_018",
+    "image_path": "data/sample_images/CXR_SYN_018_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.6,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a dense opacity in the central region, which could represent a mass or other abnormality. The image quality is limited, making it difficult to assess the nature of the opacity.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.6,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a dense opacity in the central region, which could represent a mass or other abnormality. The image quality is limited, making it difficult to assess the nature of the opacity.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_019",
+    "image_path": "data/sample_images/CXR_SYN_019_normal.png",
+    "ground_truth": "normal",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear, circular shape with lines emanating from it.\"],\n  \"justification\": \"The image appears to be a clear representation of a circular shape with lines, suggesting a possible medical device or a stylized image. No obvious abnormalities are visible in the lungs.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear, circular shape with lines emanating from it."
+      ],
+      "justification": "The image appears to be a clear representation of a circular shape with lines, suggesting a possible medical device or a stylized image. No obvious abnormalities are visible in the lungs.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_020",
+    "image_path": "data/sample_images/CXR_SYN_020_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "smoke",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_021",
+    "image_path": "data/sample_images/CXR_SYN_021_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "final",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"a circular shape is visible\"],\n  \"justification\": \"The image shows a circular shape, which could be a normal anatomical structure or an artifact. The image quality is limited, making it difficult to assess the presence of any abnormalities.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "a circular shape is visible"
+      ],
+      "justification": "The image shows a circular shape, which could be a normal anatomical structure or an artifact. The image quality is limited, making it difficult to assess the presence of any abnormalities.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_022",
+    "image_path": "data/sample_images/CXR_SYN_022_normal.png",
+    "ground_truth": "normal",
+    "split": "final",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear, circular shape with lines emanating from it.\"],\n  \"justification\": \"The image appears to be a clear representation of a circular shape with lines, suggesting a possible medical device or a stylized image. No obvious abnormalities are visible in the lungs.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear, circular shape with lines emanating from it."
+      ],
+      "justification": "The image appears to be a clear representation of a circular shape with lines, suggesting a possible medical device or a stylized image. No obvious abnormalities are visible in the lungs.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_023",
+    "image_path": "data/sample_images/CXR_SYN_023_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "final",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"a visible opacity is present in the central chest region\"],\n  \"justification\": \"The image shows a distinct opacity in the central chest, which could represent a nodule or other abnormality. Further evaluation is needed to determine the nature of this opacity.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "a visible opacity is present in the central chest region"
+      ],
+      "justification": "The image shows a distinct opacity in the central chest, which could represent a nodule or other abnormality. Further evaluation is needed to determine the nature of this opacity.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_024",
+    "image_path": "data/sample_images/CXR_SYN_024_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "final",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a possible opacity in the central region, but the image quality is limited.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a possible opacity in the central region, but the image quality is limited.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_025",
+    "image_path": "data/sample_images/CXR_SYN_025_normal.png",
+    "ground_truth": "normal",
+    "split": "final",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear, circular shape with lines emanating from it.\"],\n  \"justification\": \"The image appears to be a clear representation of a circular shape with lines, suggesting a possible medical device or a stylized image. The image quality is good.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear, circular shape with lines emanating from it."
+      ],
+      "justification": "The image appears to be a clear representation of a circular shape with lines, suggesting a possible medical device or a stylized image. The image quality is good.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_026",
+    "image_path": "data/sample_images/CXR_SYN_026_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "final",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a distinct opacity in the central region of the chest, which could represent a nodule or other abnormality.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_027",
+    "image_path": "data/sample_images/CXR_SYN_027_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "final",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a dense opacity, which could be a nodule or other abnormality. However, the image quality is limited, making it difficult to determine the exact nature of the opacity.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a dense opacity, which could be a nodule or other abnormality. However, the image quality is limited, making it difficult to determine the exact nature of the opacity.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_028",
+    "image_path": "data/sample_images/CXR_SYN_028_normal.png",
+    "ground_truth": "normal",
+    "split": "final",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"normal\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"The image shows a clear, circular shape with distinct lines.\", \"The image appears to be a representation of a cross-sectional view.\", \"There are no obvious abnormalities visible in the image.\"],\n  \"justification\": \"The image shows a clear circular shape with distinct lines, suggesting a possible representation of a cross-sectional view. There are no obvious abnormalities visible in the image, and the image quality appears good.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "normal",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "The image shows a clear, circular shape with distinct lines.",
+        "The image appears to be a representation of a cross-sectional view.",
+        "There are no obvious abnormalities visible in the image."
+      ],
+      "justification": "The image shows a clear circular shape with distinct lines, suggesting a possible representation of a cross-sectional view. There are no obvious abnormalities visible in the image, and the image quality appears good.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_029",
+    "image_path": "data/sample_images/CXR_SYN_029_suspected_opacity.png",
+    "ground_truth": "suspected_opacity",
+    "split": "final",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"good\",\n  \"predicted_class\": \"suspected_opacity\",\n  \"confidence\": 0.95,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a distinct opacity in the central region of the chest, which could represent a mass or other abnormality.\",\n  \"limitations\": [\"image quality\", \"lack of clinical context\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "good",
+      "predicted_class": "suspected_opacity",
+      "confidence": 0.95,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a distinct opacity in the central region of the chest, which could represent a mass or other abnormality.",
+      "limitations": [
+        "image quality",
+        "lack of clinical context"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  },
+  {
+    "case_id": "CXR_SYN_030",
+    "image_path": "data/sample_images/CXR_SYN_030_uncertain.png",
+    "ground_truth": "uncertain",
+    "split": "final",
+    "prompt_mode": "improved_v3",
+    "model_id": "google/medgemma-4b-it",
+    "json_valid": true,
+    "raw_output": "```json\n{\n  \"image_quality\": \"limited\",\n  \"predicted_class\": \"uncertain\",\n  \"confidence\": 0.2,\n  \"visual_evidence\": [\"a visible opacity is present\"],\n  \"justification\": \"The image shows a possible opacity, but the quality is limited and it is difficult to determine the exact nature of the opacity.\",\n  \"limitations\": [\"image quality\", \"projection\"],\n  \"warning\": \"Educational prototype only. Not for diagnosis. A qualified clinician must verify the image.\"\n}\n```",
+    "prediction": {
+      "image_quality": "limited",
+      "predicted_class": "uncertain",
+      "confidence": 0.2,
+      "visual_evidence": [
+        "a visible opacity is present"
+      ],
+      "justification": "The image shows a possible opacity, but the quality is limited and it is difficult to determine the exact nature of the opacity.",
+      "limitations": [
+        "image quality",
+        "projection"
+      ],
+      "warning": "Educational prototype only. Not for diagnosis. A qualified clinician must verify the image."
+    }
+  }
+]
